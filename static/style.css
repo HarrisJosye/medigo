@@ -1,0 +1,28 @@
+body {
+	background-image: url("images/login.jpg");
+	background-size: contain;
+	font-family: 'Oswald', 'Futura', sans-serif;
+}
+#wrapper {
+	margin-top: 5% !important;
+}
+#content {
+	background: lightblue;
+	padding: 25px;
+}
+#content > h2 {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 0;
+}
+.t10 {
+	margin-top: 10px;
+}
+.t20 {
+	margin-top: 10px;
+}
+
+footer {
+	margin-top: 20px;
+	color: white;
+}

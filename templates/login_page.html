@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <h1>Login</h1>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<!link rel="stylesheet" href="{{ url_for('static', filename='flatly.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+</head>
+<body>
+<div class="container-fluid" id="wrapper">
+
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+
+<p>Please login with your valid credentials.</p>
+<form method=post action="{{ url_for('login_page') }}">
+    <dl>
+      <dt>Username:
+      <dd><input type=text name=username value="{{
+          request.form.username }}">
+      <dt>Password:
+      <dd><input type=password name=password value="{{
+          request.form.password }}">
+    </dl>
+    <p><input type=submit value=Login>
+  </form>
+                </div>
+            </div>
+</div>
+    {% for message in get_flashed_messages() %}
+      <div class="alert-error">Error: {{ message }}</div>
+    {% endfor %}
+</body>
+</html>
